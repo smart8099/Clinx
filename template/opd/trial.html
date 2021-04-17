@@ -1,0 +1,71 @@
+<h3 class="course-heading text-center">Patient Personal Information</h3>
+    <div class="  border p-3 m-5">
+        <div class="form-row">
+
+        <div class="form-group col-m4-3 mb-0">
+        {{ form.sfirst_name|as_crispy_field }}
+      </div>
+      <div class="form-group col-md-3 mb-0">
+        {{ form.slast_name|as_crispy_field }}
+      </div>
+        <div class="form-group col-md-3 mb-0">
+        {{ form.student_age|as_crispy_field }}
+      </div>
+
+             <div class="form-group col-md-3 mb-0">
+        {{ form.student_phone|as_crispy_field }}
+      </div>
+    </div>
+    </div>
+    <!--student educational info-->
+    <h3 class="course-heading text-center">Patient Educational Information</h3>
+    <div class="  border p-3 m-5">
+    <div class="form-row">
+
+        <div class="form-group col-md-3 mb-0">
+            {{ form.sindex_number|as_crispy_field }}
+          </div>
+      
+      <div class="form-group col-md-3 mb-0">
+        {{ form.student_department|as_crispy_field }}
+      </div>
+        <div class="form-group col-md-3 mb-0">
+        {{ form.student_session|as_crispy_field }}
+      </div>
+
+            <div class="form-group col-md-3 mb-0">
+        {{ form.student_level|as_crispy_field }}
+      </div>
+    </div>
+    </div>
+
+   
+
+    <!--student medical info-->
+    <h3 class="course-heading text-center">Patient Educational Information</h3>
+    <div class="  border p-3 m-5">
+    <div class="form-row">
+
+        <div class="form-group col-md-3 mb-0">
+            {{ form.student_email|as_crispy_field }}
+          </div>
+      
+      <div class="form-group col-md-3 mb-0">
+        {{ form.time_created|as_crispy_field }}
+      </div>
+        <div class="form-group col-md-3 mb-0">
+        {{ form.gender|as_crispy_field }}
+      </div>
+
+           
+      </div>
+    </div>
+    </div>
+
+   
+
+ 
+ <div class="container text-center p-3 m-3">
+     <button type="submit" class="btn btn-lg btn-primary"><i class="fas fa-database"></i>SUBMIT</button>
+ </div>
+

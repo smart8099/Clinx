@@ -1,0 +1,102 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}"> 
+
+     <!-- Font Awesome -->
+ <link rel="stylesheet" href="{% static 'css/all.css' %}">
+ 
+ <!-- Custom -->
+ <link rel="stylesheet" href="{%  static 'css/style.css' %}">
+</head>
+
+<body>
+    
+ <!-- Top Bar -->
+ <section id="top-bar" class="p-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <i class="fas fa-phone"></i> 0547169148
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-envelope-open"></i> clinic@ktu.edu.gh
+        </div>
+        <div class="col-md-4">
+          <div class="social text-right">
+            <a href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-facebook"></i>
+            </a>
+            
+            <a href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="">
+        <img src="{% static 'img/clinxw.png' %}"  class="logo" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+     
+    </div>
+  </nav>
+
+
+ <section id="login" class="bg-light py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="card">
+            <div class="card-header bg-primary text-white">
+              <h4 class="text-center">
+                <i class="fas fa-2x fa-flask"></i> Laboratory Login  </h4>
+            </div>
+            <div class="card-body">
+              {%include 'partials/alert.html'%}
+              <form action="{% url 'lab_login' %}" method="POST">
+                {%csrf_token%}
+                <div class="form-group">
+                  <label for="username">Username</label>
+                  <input type="text" name="username" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="password2">Password</label>
+                  <input type="password" name="password" class="form-control" required>
+                </div>
+
+                <input type="submit" value="Login" class="btn btn-secondary btn-block">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+   <!-- Footer -->
+   <footer id="main-footer" class="py-4 bg-primary text-white text-center">
+    Copyright &copy;
+     Abdul 2021
+  </footer>
+
+</body>
+</html>

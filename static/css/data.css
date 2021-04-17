@@ -1,0 +1,18 @@
+
+ tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+.std_info {
+    
+   width: 100%;
+   max-width: 900px;
+   padding: 15px;
+   margin: auto;
+   
+   
+   
+   
+}

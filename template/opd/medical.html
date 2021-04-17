@@ -1,0 +1,34 @@
+
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{%block content%}
+
+<form action="{% url 'medical_info' %}" method="POST" autocomplete="off" class="student_info">
+    {%csrf_token%}
+    <table>{{form.as_table}}</table>
+       
+       
+     
+     </div>
+     </div>
+     
+
+
+ </form>
+ 
+    
+
+
+ <script type="text/javascript">
+
+ 
+</script>
+
+
+{% endblock%}
+
+
+
+
+
+

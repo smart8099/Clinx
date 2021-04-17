@@ -1,0 +1,55 @@
+
+{%extends 'base.html' %}
+
+
+{%block content %}
+
+
+<form method="post"  autocomplete="off" action="{% url 'searcher' %}" >
+    {%csrf_token%} 
+<div class="container d-flex" >
+   
+   <input class="form-control m-3" type="text" name="search" placeholder="Enter student to search">
+   <button type="submit" class="btn btn-primary m-3">Search</button>
+   <button type="submit" class="btn btn-primary m-3">Cancel</button>
+</div>
+
+<table class="table my_table ">
+    <thead class="border-bottom font-weight-bold">
+        <tr>
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>Age</td>
+            <td>Gender</td>
+            <td> Index Number</td>
+            <td>Phone Number </td>
+            <td>Student Email</td>
+            <td>Student Department </td>
+            <td>Student Session</td>
+            
+            <td>Student Level </td>
+            <td>Date Created</td>
+           
+        </tr>
+    </thead>
+
+    <tbody>
+         {% for student in Medical_Record %}
+         <tr>
+             <td>{{student.First_name}}</td>
+             <td>{{student.Last_name}}</td>
+             <td>{{student.Student_age}}</td>
+             <td>{{student.Student_gender}}</td>
+             <td>{{student.Index_number}}</td>
+             <td>{{student.Student_phone}}</td>
+             <td>{{student.Student_email}}</td>
+             <td>{{student.Student_department}}</td>
+             <td>{{student.Student_session}}</td>
+             <td>{{student.Student_level}}</td>
+             <td>{{student.Time_created}}</td>
+             
+         </tr>
+         {%endfor%}
+    </tbody>
+</table>
+{%endblock%}

@@ -1,0 +1,106 @@
+
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{%block content%}
+
+<form action="{% url 'patient' %}" method="POST" autocomplete="off" class="student_info">
+    {%csrf_token%}
+    <h3 class="course-heading text-center">Student Personal Information</h3>
+    <div class="  border p-3 m-5">
+        <div class="form-row">
+
+        <div class="form-group col-md-3 mb-0">
+        {{ form.First_name|as_crispy_field }}
+      </div>
+
+      <div class="form-group col-md-3 mb-0">
+        {{ form.Last_name|as_crispy_field }}
+      </div>
+
+        <div class="form-group col-md-3 mb-0">
+        {{ form.Student_age|as_crispy_field }}
+      </div>
+
+        <div class="form-group col-md-3 mb-0">
+        {{ form.Student_phone|as_crispy_field }}
+      </div>
+      </div>
+    </div>  
+   
+
+     
+     <!--student educational info-->
+    
+     <h3 class="course-heading text-center">Patient Educational Information</h3>
+    <div class="  border p-3 m-5">
+     <div class="form-row">
+ 
+         <div class="form-group col-md-3 mb-0">
+             {{ form.Index_number|as_crispy_field }}
+           </div>
+       
+       <div class="form-group col-md-3 mb-0">
+         {{ form.Student_department|as_crispy_field }}
+       </div>
+         <div class="form-group col-md-3 mb-0">
+         {{ form.Student_session|as_crispy_field }}
+       </div>
+ 
+             <div class="form-group col-md-3 mb-0">
+         {{ form.Student_level|as_crispy_field }}
+       </div>
+     </div>
+     </div>
+     
+
+
+     <!--student medical info-->
+<h3 class="course-heading text-center">Othe Personal Information</h3>
+<div class="  border p-3 m-5">
+<div class="form-row">
+
+    <div class="form-group col-md-3 mb-0">
+        {{ form.Student_email|as_crispy_field }}
+      </div>
+  
+  <div class="form-group col-md-3 mb-0">
+    {{ form.Time_created|as_crispy_field }}
+  </div>
+    <div class="form-group col-md-3 mb-0">
+    {{ form.Student_gender|as_crispy_field }}
+  </div>
+
+       
+  </div>
+</div>
+</div>
+
+
+
+     
+    
+<div class=" container d-flex justify-content-md-between text-center p-3 m-3">
+  <button type="submit" class="btn btn-lg btn-primary"><i class="fas fa-database"></i>SUBMIT</button>
+  <a href="#">Student Already have an account</a>
+ </div> 
+
+
+
+ </form>
+ 
+    
+
+
+ <script type="text/javascript">
+
+ 
+</script>
+
+
+{% endblock%}
+
+
+
+
+
+
